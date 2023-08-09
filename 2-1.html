@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0;}
+        ul, li, ol {list-style: none; margin:0; padding:0;}
+        header {width:100%; height:50px; background-color: #eee; position:absolute; opacity: 0.7;}
+        nav > ul > li > a {text-decoration: none; color:black;}
+        nav > ul > li > a:hover {background-color: gray;}
+        .a {width:50px; height:50px; cursor: pointer;}
+
+        #slider {width:100%; height:500px; background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjdfMjQ1%2FMDAxNjg1MTE2NjQxOTgw.OJ--uLZlUNU28GN7qyTII6diANeTUNXlMy8KyHOtpJwg.xcj1Rj36mkZ_OxFenBCXw9wHkLt8qzQokfxuTXmBCvAg.PNG.mch4023%2F42_profile_img.png&type=sc960_832");
+    background-size: cover; background-position: center;}
+        #slider > h1 {color:#fff; text-align:center; padding:150px 0 0 0; letter-spacing: 20px; font-size: 30px; ;}
+        #slider > p {color:#fff; text-align:center; padding:20px 0 0 0; font-size: 20px; ;}
+        #slider > p > a {color:#fff; text-align:center; padding:10px; font-size: 20px; background-color: #000; border-radius: 20px;
+        text-decoration: none;;}
+
+
+        
+
+        @media(max-width:767px) {
+            header .small{display: flex; align-items:center; justify-content: space-between;}
+        nav > ul {display: flex; flex-direction: column;}
+        nav > ul > li > a {padding:15px; display: block; line-height: 40px;}
+        .a {display: block;}
+        }
+
+        @media(min-width:768px) {
+            header {display: flex; align-items:center; justify-content: space-around;}
+        nav > ul {display: flex;}
+        nav > ul > li > a {padding:15px;}
+        .a {display: none;}
+        }
+
+        
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".a").click(function() {
+                $(".b").slideToggle();
+            });
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <header>
+        <div class="small">
+            <div class="logo">logo</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="목록" class="a">
+        </div>
+
+        <nav class="b">
+            <ul>
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">콘텐츠</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">문의</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="slider">
+        <h1>LOGGER</h1>
+        <p>맛있고 즐거운 라이프로그</p>
+        <p><a href="#">라이프로그 시작하기</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0; box-sizing: border-box;}
+        .photo > img:hover {transform: scale(1.2);}
+        
+
+        @media(max-width:599px) {
+            #wrap {width:100%; height:auto; border:2px solid black; margin:0 auto; display: flex; justify-content: space-around;
+        align-items: center; flex-direction: column;}
+        .box {width:95%; height:150px; background-color: gold; display: flex; margin:3% 2%;}
+        .photo {width:40%; height:150px; overflow: hidden;}
+        .photo > img {width:100%; height:100%; transform: scale(1.0); transition: 0.3s;}
+        .text{width:60%}
+        }
+
+        @media(min-width:600px) {
+            #wrap {width:1000px; height:200px; border:2px solid black; margin:0 auto; display: flex; justify-content: space-around;
+        align-items: center;}
+        .box {width:45%; height:150px; background-color: gold; display: flex;}
+        .photo {width:40%; height:150px; overflow: hidden;}
+        .photo > img {width:100%; height:100%; transform: scale(1.0); transition: 0.3s;}
+        .text{width:60%}
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">
+            <div class="photo">
+                <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fCVFQyU5NSVCQyVFQyVCMSU4NHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="채소">
+            </div>
+            <div class="text">
+                <h3>야채 키우기 일기</h3>
+                <p>최근 키우고 있는 야채들이 무럭무럭 자라고 있어요. 재미로 야채 키우는 것을 일기로 작성해보겠습니다.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="photo">
+                <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fCVFQyU5NSVCQyVFQyVCMSU4NHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="채소">
+            </div>
+            <div class="text">
+                <h3>야채 키우기 일기</h3>
+                <p>최근 키우고 있는 야채들이 무럭무럭 자라고 있어요. 재미로 야채 키우는 것을 일기로 작성해보겠습니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
